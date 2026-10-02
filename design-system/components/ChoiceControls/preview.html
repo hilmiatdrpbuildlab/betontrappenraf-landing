@@ -1,0 +1,57 @@
+<!-- @dsCard group="Forms" height=560 subtitle="Checkbox, radio, switch and the stair-type option tiles of the quote form" -->
+<div class="rg sg-stack">
+  <div class="sg-pad" data-theme="light">
+    <div class="sg-grid-3" style="align-items: start">
+      <fieldset class="rg-field">
+        <legend>Checkbox</legend>
+        <div class="rg-choices">
+          <label class="rg-check"><input type="checkbox" checked> Plannen meegestuurd</label>
+          <label class="rg-check"><input type="checkbox"> <span>Bel mij terug<span class="rg-check__hint">Raf belt u op het nummer hierboven</span></span></label>
+          <label class="rg-check"><input type="checkbox" class="sg-indeterminate"> Alle foto's</label>
+          <label class="rg-check"><input type="checkbox" disabled> Uitgeschakeld</label>
+        </div>
+      </fieldset>
+      <fieldset class="rg-field">
+        <legend>Radio</legend>
+        <div class="rg-choices">
+          <label class="rg-check"><input type="radio" name="cc-fase" checked> Nieuwbouw</label>
+          <label class="rg-check"><input type="radio" name="cc-fase"> Renovatie</label>
+          <label class="rg-check"><input type="radio" name="cc-fase" disabled> Uitgeschakeld</label>
+        </div>
+      </fieldset>
+      <fieldset class="rg-field">
+        <legend>Switch (CMS)</legend>
+        <div class="rg-choices">
+          <label class="rg-switch"><input type="checkbox" role="switch" checked> Toon op homepage</label>
+          <label class="rg-switch"><input type="checkbox" role="switch"> Uitgelicht</label>
+          <label class="rg-switch"><input type="checkbox" role="switch" disabled> Uitgeschakeld</label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <div class="sg-pad" data-theme="light">
+    <fieldset class="rg-field">
+      <legend>Type trap</legend>
+      <div class="rg-options">
+        <label class="rg-option"><input type="radio" name="cc-trap" checked>
+          <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V26H8V20H16V14H24V8H32V2H40V32Z" fill="currentColor"/></svg>
+          <span class="rg-option__name">Rechte trap</span><span class="rg-option__hint">Eén rechte steekgang</span></label>
+        <label class="rg-option"><input type="radio" name="cc-trap">
+          <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V26H6V20H12V14H18V2H40V8H24V32Z" fill="currentColor"/></svg>
+          <span class="rg-option__name">Kwarttrap</span><span class="rg-option__hint">Draait een kwart</span></label>
+        <label class="rg-option"><input type="radio" name="cc-trap">
+          <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V27H6V22H12V17H22V12H28V7H34V2H40V32Z" fill="currentColor"/></svg>
+          <span class="rg-option__name">Bordestrap</span><span class="rg-option__hint">Met een tussenbordes</span></label>
+        <label class="rg-option"><input type="radio" name="cc-trap">
+          <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V24H40V32ZM8 24V18H40V24ZM16 18V12H40V18Z" fill="currentColor"/></svg>
+          <span class="rg-option__name">Buitentrap</span><span class="rg-option__hint">Aan de voordeur of het terras</span></label>
+      </div>
+    </fieldset>
+  </div>
+  <div class="sg-row" data-theme="dark">
+    <label class="rg-check"><input type="checkbox" checked> Plannen meegestuurd</label>
+    <label class="rg-check"><input type="radio" name="cc-d" checked> Nieuwbouw</label>
+    <label class="rg-switch"><input type="checkbox" role="switch" checked> Toon op homepage</label>
+  </div>
+  <script>document.querySelectorAll(".sg-indeterminate").forEach(function (i) { i.indeterminate = true; });</script>
+</div>

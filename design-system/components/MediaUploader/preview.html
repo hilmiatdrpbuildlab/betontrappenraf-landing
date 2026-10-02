@@ -1,0 +1,36 @@
+<!-- @dsCard group="CMS" height=640 subtitle="Drop zone and the upload list: uploading, done with alt text missing, done, and a file that was refused" -->
+<div class="rg sg-pad" data-theme="light">
+  <div class="sg-grid-2" style="align-items: start">
+    <div style="display: grid; gap: 8px">
+      <label class="rg-field__label" for="mu-files">Foto's van de realisatie</label>
+      <div class="rg-drop">
+        {{icon:upload}}
+        <p><b>Sleep foto's hierheen</b> of klik om te kiezen</p>
+        <p class="rg-drop__hint">JPG, PNG of WebP, tot 15 MB per foto. Eerste foto wordt de omslagfoto.</p>
+        <input id="mu-files" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+      </div>
+    </div>
+    <ul class="rg-files" aria-label="Geüploade foto's">
+      <li class="rg-file">
+        <span class="rg-file__ph">{{icon:image}}</span>
+        <div style="min-width: 0"><p class="rg-file__name">trap-ontkist-2.jpg</p><p class="rg-file__meta">2,4 MB · 64%</p><div class="rg-progress" role="progressbar" aria-label="Uploaden" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"><span style="width: 64%"></span></div></div>
+        <button class="rg-btn rg-btn--ghost rg-btn--icon rg-btn--sm" type="button" aria-label="Upload annuleren">{{icon:x}}</button>
+      </li>
+      <li class="rg-file">
+        <img src="{{img:photos/client/trap-bekisting-ruwbouw.jpg}}" alt="">
+        <div style="min-width: 0"><p class="rg-file__name">bekisting-ruwbouw.jpg</p><p class="rg-file__meta is-warn">Alt-tekst ontbreekt</p></div>
+        <button class="rg-btn rg-btn--outline rg-btn--sm" type="button">Aanvullen</button>
+      </li>
+      <li class="rg-file">
+        <img src="{{img:photos/client/trap-ontkist.jpg}}" alt="">
+        <div style="min-width: 0"><p class="rg-file__name">trap-ontkist.jpg</p><p class="rg-file__meta">Omslagfoto · 1,8 MB</p></div>
+        <button class="rg-btn rg-btn--ghost rg-btn--icon rg-btn--sm" type="button" aria-label="Verwijder trap-ontkist.jpg">{{icon:trash-2}}</button>
+      </li>
+      <li class="rg-file rg-file--error">
+        <span class="rg-file__ph">{{icon:circle-x}}</span>
+        <div style="min-width: 0"><p class="rg-file__name">plan-woning.heic</p><p class="rg-file__meta is-error">HEIC wordt niet ondersteund. Bewaar de foto als JPG en probeer opnieuw.</p></div>
+        <button class="rg-btn rg-btn--ghost rg-btn--icon rg-btn--sm" type="button" aria-label="Verwijder plan-woning.heic uit de lijst">{{icon:x}}</button>
+      </li>
+    </ul>
+  </div>
+</div>

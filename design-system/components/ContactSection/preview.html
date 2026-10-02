@@ -1,0 +1,91 @@
+<!-- @dsCard group="Sections" height=1120 subtitle="Contact details over a Dark photo panel, and the quote request form with its success state. Submit to see validation" -->
+<section class="rg rg-section" data-theme="light" style="padding-block: 48px">
+  <div class="rg-container">
+    <div class="rg-contact">
+      <div class="rg-contact__info" data-theme="dark">
+        <img src="{{img:photos/client/bestelwagen.jpg}}" alt="">
+        <div style="display: grid; gap: 16px">
+          <span class="rg-eyebrow"><span class="rg-step-mark"></span>Contact</span>
+          <h2 class="t-h2">Bel Raf of stuur uw plannen</h2>
+        </div>
+        <div class="rg-contact__rows">
+          <div class="rg-contact__row">{{icon:phone}}<div><strong>Telefoon</strong><a href="tel:+32495512902">0495 51 29 02</a></div></div>
+          <div class="rg-contact__row">{{icon:mail}}<div><strong>E-mail</strong><a href="mailto:info@betontrappenraf.be">info@betontrappenraf.be</a></div></div>
+          <div class="rg-contact__row">{{icon:map-pin}}<div><strong>Adres</strong><span>Wiekevorstsegoorweg 40<br>2222 Wiekevorst</span></div></div>
+          <div class="rg-contact__row">{{icon:facebook}}<div><strong>Realisaties</strong><a href="https://www.facebook.com/people/Geerts-Raf-betontrappen/100057339705347/">Geerts Raf betontrappen</a></div></div>
+        </div>
+      </div>
+      <div>
+        <form class="rg-contact__form" data-rg-form>
+          <div style="display: grid; gap: 8px">
+            <h3 class="t-h3">Offerte aanvragen</h3>
+            <p class="t-small" style="color: var(--ink-soft)">Velden met * zijn verplicht.</p>
+          </div>
+          <div class="rg-form">
+            <div class="rg-field">
+              <label for="cs-naam">Naam <span class="rg-field__req" aria-hidden="true">*</span></label>
+              <input class="rg-input" id="cs-naam" name="naam" type="text" autocomplete="name" required aria-describedby="cs-naam-err">
+              <p class="rg-field__error" id="cs-naam-err">{{icon:circle-x}} Vul uw naam in.</p>
+            </div>
+            <div class="rg-field">
+              <label for="cs-tel">Telefoon <span class="rg-field__req" aria-hidden="true">*</span></label>
+              <input class="rg-input" id="cs-tel" name="telefoon" type="tel" autocomplete="tel" required aria-describedby="cs-tel-err">
+              <p class="rg-field__error" id="cs-tel-err">{{icon:circle-x}} Vul een telefoonnummer in, zodat Raf u kan terugbellen.</p>
+            </div>
+            <div class="rg-field">
+              <label for="cs-mail">E-mail <span class="rg-field__req" aria-hidden="true">*</span></label>
+              <input class="rg-input" id="cs-mail" name="email" type="email" autocomplete="email" placeholder="naam@voorbeeld.be" required aria-describedby="cs-mail-err">
+              <p class="rg-field__error" id="cs-mail-err">{{icon:circle-x}} Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.be.</p>
+            </div>
+            <div class="rg-field">
+              <label for="cs-gem">Gemeente van de werf</label>
+              <input class="rg-input" id="cs-gem" name="gemeente" type="text" placeholder="Bijvoorbeeld Westerlo">
+            </div>
+            <fieldset class="rg-field rg-field--full">
+              <legend>Type trap</legend>
+              <div class="rg-options">
+                <label class="rg-option"><input type="radio" name="type" value="recht" checked>
+                  <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V26H8V20H16V14H24V8H32V2H40V32Z" fill="currentColor"/></svg>
+                  <span class="rg-option__name">Rechte trap</span></label>
+                <label class="rg-option"><input type="radio" name="type" value="kwart">
+                  <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V26H6V20H12V14H18V2H40V8H24V32Z" fill="currentColor"/></svg>
+                  <span class="rg-option__name">Kwarttrap</span></label>
+                <label class="rg-option"><input type="radio" name="type" value="bordes">
+                  <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V27H6V22H12V17H22V12H28V7H34V2H40V32Z" fill="currentColor"/></svg>
+                  <span class="rg-option__name">Bordestrap</span></label>
+                <label class="rg-option"><input type="radio" name="type" value="buiten">
+                  <svg class="rg-option__shape" viewBox="0 0 40 32" aria-hidden="true"><path d="M0 32V24H40V32ZM8 24V18H40V24ZM16 18V12H40V18Z" fill="currentColor"/></svg>
+                  <span class="rg-option__name">Buitentrap</span></label>
+              </div>
+            </fieldset>
+            <div class="rg-field">
+              <label for="cs-hoogte">Verdiepingshoogte <span class="rg-field__opt">(optioneel)</span></label>
+              <div class="rg-input-group"><input class="rg-input" id="cs-hoogte" name="hoogte" type="text" inputmode="decimal" placeholder="278"><span class="rg-input-group__unit">cm</span></div>
+            </div>
+            <div class="rg-field">
+              <label for="cs-plan">Plannen of foto's <span class="rg-field__opt">(optioneel)</span></label>
+              <div class="rg-drop rg-drop--compact">{{icon:upload}}<span><b>Kies bestanden</b> of sleep ze hier</span><input id="cs-plan" name="plannen" type="file" accept=".pdf,image/*" multiple></div>
+            </div>
+            <div class="rg-field rg-field--full">
+              <label for="cs-vraag">Uw vraag</label>
+              <textarea class="rg-textarea" id="cs-vraag" name="vraag" placeholder="Binnen of buiten, recht of draaiend, nieuwbouw of renovatie."></textarea>
+            </div>
+            <div class="rg-field rg-field--full">
+              <label class="rg-check"><input type="checkbox" name="privacy" required aria-describedby="cs-priv-err"> <span>Ik ga akkoord dat Raf Geerts mijn gegevens gebruikt om mijn aanvraag te beantwoorden. <a href="#">Privacy</a></span></label>
+              <p class="rg-field__error" id="cs-priv-err">{{icon:circle-x}} Vink dit aan om uw aanvraag te versturen.</p>
+            </div>
+            <div class="rg-form__foot">
+              <span class="rg-form__note">We nemen zo snel mogelijk contact met u op.</span>
+              <button class="rg-btn rg-btn--lg" type="submit">{{icon:loader-circle|rg-spin}} <span class="rg-btn__label">Aanvraag versturen</span></button>
+            </div>
+          </div>
+        </form>
+        <div class="rg-success" data-rg-success tabindex="-1" hidden>
+          <span class="rg-success__icon">{{icon:check}}</span>
+          <h3 class="t-h3">Bedankt voor uw aanvraag</h3>
+          <p>Raf bekijkt uw gegevens en neemt zo snel mogelijk contact met u op. Dringend? Bel <a href="tel:+32495512902">0495 51 29 02</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

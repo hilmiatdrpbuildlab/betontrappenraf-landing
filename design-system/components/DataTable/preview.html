@@ -1,0 +1,82 @@
+<!-- @dsCard group="CMS" height=760 subtitle="The Realisaties list: search, filter, bulk selection, sortable header, status badges, row actions and paging. Tick a row to see the bulk bar" -->
+<div class="rg sg-stack">
+  <div class="sg-pad" data-theme="light">
+    <section class="rg-panel" data-rg-table>
+      <div class="rg-toolbar">
+        <div class="rg-input-wrap">{{icon:search}}<input class="rg-input" type="search" placeholder="Zoek op titel" aria-label="Zoek realisaties"></div>
+        <div class="rg-select-wrap"><select class="rg-select" aria-label="Filter op status"><option>Alle statussen</option><option>Gepubliceerd</option><option>Concept</option><option>Gepland</option><option>Offline</option></select>{{icon:chevron-down}}</div>
+        <div class="rg-toolbar__bulk"><span data-rg-count>0 geselecteerd</span><button class="rg-btn rg-btn--outline rg-btn--sm" type="button">Publiceren</button><button class="rg-btn rg-btn--danger rg-btn--sm" type="button">{{icon:trash-2}} Verwijderen</button></div>
+      </div>
+      <div class="rg-table-wrap">
+        <table class="rg-table">
+          <thead>
+            <tr>
+              <th class="rg-table__col-check"><label class="rg-check"><input type="checkbox" data-rg-all aria-label="Alle rijen selecteren"></label></th>
+              <th aria-sort="none"><button type="button">Realisatie {{icon:arrow-up-down}}</button></th>
+              <th>Type</th>
+              <th>Status</th>
+              <th aria-sort="descending"><button type="button">Bijgewerkt {{icon:chevron-down}}</button></th>
+              <th><span class="rg-sr">Acties</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label class="rg-check"><input type="checkbox" aria-label="Selecteer Kwartdraaiende trap"></label></td>
+              <td><div class="rg-table__item"><img class="rg-table__thumb" src="{{img:photos/client/kwarttrap-bekisting.jpg}}" alt=""><div><b>Kwartdraaiende trap</b><small>/realisaties/kwartdraaiende-trap</small></div></div></td>
+              <td><span class="rg-badge">Kwarttrap</span></td>
+              <td><span class="rg-badge rg-badge--success"><span class="rg-badge__dot"></span>Gepubliceerd</span></td>
+              <td class="rg-table__date">02-10-2026</td>
+              <td><div class="rg-table__actions"><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bekijk Kwartdraaiende trap">{{icon:eye}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bewerk Kwartdraaiende trap">{{icon:pencil}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Meer acties">{{icon:ellipsis}}</button></div></td>
+            </tr>
+            <tr>
+              <td><label class="rg-check"><input type="checkbox" checked aria-label="Selecteer Buitentrap aan de voordeur"></label></td>
+              <td><div class="rg-table__item"><img class="rg-table__thumb" src="{{img:photos/client/buitentrap-bekisting.jpg}}" alt=""><div><b>Buitentrap aan de voordeur</b><small>/realisaties/buitentrap-voordeur</small></div></div></td>
+              <td><span class="rg-badge">Buitentrap</span></td>
+              <td><span class="rg-badge rg-badge--info"><span class="rg-badge__dot"></span>Concept</span></td>
+              <td class="rg-table__date">28-09-2026</td>
+              <td><div class="rg-table__actions"><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bekijk Buitentrap aan de voordeur">{{icon:eye}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bewerk Buitentrap aan de voordeur">{{icon:pencil}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Meer acties">{{icon:ellipsis}}</button></div></td>
+            </tr>
+            <tr>
+              <td><label class="rg-check"><input type="checkbox" aria-label="Selecteer Keldertrap in de ruwbouw"></label></td>
+              <td><div class="rg-table__item"><img class="rg-table__thumb" src="{{img:photos/client/keldertrap-bekisting.jpg}}" alt=""><div><b>Keldertrap in de ruwbouw</b><small>/realisaties/keldertrap-ruwbouw</small></div></div></td>
+              <td><span class="rg-badge">Keldertrap</span></td>
+              <td><span class="rg-badge rg-badge--warning"><span class="rg-badge__dot"></span>Gepland</span></td>
+              <td class="rg-table__date">15-09-2026</td>
+              <td><div class="rg-table__actions"><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bekijk Keldertrap in de ruwbouw">{{icon:eye}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bewerk Keldertrap in de ruwbouw">{{icon:pencil}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Meer acties">{{icon:ellipsis}}</button></div></td>
+            </tr>
+            <tr>
+              <td><label class="rg-check"><input type="checkbox" aria-label="Selecteer Trap met tussenbordes"></label></td>
+              <td><div class="rg-table__item"><img class="rg-table__thumb" src="{{img:photos/client/bordestrap-ontkist.jpg}}" alt=""><div><b>Trap met tussenbordes</b><small>/realisaties/bordestrap</small></div></div></td>
+              <td><span class="rg-badge">Bordestrap</span></td>
+              <td><span class="rg-badge rg-badge--danger"><span class="rg-badge__dot"></span>Offline</span></td>
+              <td class="rg-table__date">03-08-2026</td>
+              <td><div class="rg-table__actions"><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bekijk Trap met tussenbordes">{{icon:eye}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Bewerk Trap met tussenbordes">{{icon:pencil}}</button><button class="rg-btn rg-btn--ghost rg-btn--icon" type="button" aria-label="Meer acties">{{icon:ellipsis}}</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rg-pager">
+        <span>1–4 van 24 realisaties</span>
+        <nav class="rg-pager__pages" aria-label="Paginering">
+          <button type="button" disabled aria-label="Vorige pagina">{{icon:chevron-left}}</button>
+          <button type="button" aria-current="page">1</button><button type="button">2</button><button type="button">3</button>
+          <button type="button" aria-label="Volgende pagina">{{icon:chevron-right}}</button>
+        </nav>
+      </div>
+    </section>
+    <p class="sg-example" style="margin-top: 8px">Example data</p>
+  </div>
+  <div class="sg-pad" data-theme="dark">
+    <section class="rg-panel" data-rg-table>
+      <div class="rg-table-wrap">
+        <table class="rg-table">
+          <thead><tr><th class="rg-table__col-check"><label class="rg-check"><input type="checkbox" data-rg-all aria-label="Alle rijen selecteren"></label></th><th>Realisatie</th><th>Status</th><th>Bijgewerkt</th></tr></thead>
+          <tbody>
+            <tr><td><label class="rg-check"><input type="checkbox" checked aria-label="Selecteer Rechte trap"></label></td><td><div class="rg-table__item"><img class="rg-table__thumb" src="{{img:photos/client/trap-ontkist.jpg}}" alt=""><div><b>Rechte trap, pas ontkist</b><small>/realisaties/rechte-trap</small></div></div></td><td><span class="rg-badge rg-badge--success"><span class="rg-badge__dot"></span>Gepubliceerd</span></td><td class="rg-table__date">20-09-2026</td></tr>
+            <tr><td><label class="rg-check"><input type="checkbox" aria-label="Selecteer Buitentrap tussen keermuren"></label></td><td><div class="rg-table__item"><img class="rg-table__thumb" src="{{img:photos/client/buitentrap-keermuur.jpg}}" alt=""><div><b>Buitentrap tussen keermuren</b><small>/realisaties/buitentrap-keermuur</small></div></div></td><td><span class="rg-badge rg-badge--info"><span class="rg-badge__dot"></span>Concept</span></td><td class="rg-table__date">11-09-2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>

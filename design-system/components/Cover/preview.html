@@ -1,0 +1,31 @@
+<!-- @dsCard height=288 -->
+<div class="rg cover">
+  <style>
+    .cover { position: relative; width: 960px; height: 288px; overflow: hidden; background: var(--bg); }
+    .cover svg { position: absolute; inset: 0; }
+    .cover .ink { fill: var(--ink); }
+    .cover .red { fill: var(--red-500); }
+    .cover .grey { fill: var(--concrete-400); }
+    .cover .dim { stroke: var(--highlight); stroke-width: 1; fill: none; }
+    .cover__text { position: absolute; left: 40px; right: 40px; bottom: 32px; display: grid; gap: 10px; }
+    .cover__name { font: 800 60px/0.95 var(--font-sans); font-variation-settings: "wdth" 75; letter-spacing: -0.005em; color: var(--ink); margin: 0; white-space: nowrap; }
+    .cover__tag { font: 400 14px/1.4 var(--font-sans); color: var(--ink-soft); margin: 0; }
+  </style>
+  <svg viewBox="0 0 960 288" width="960" height="288" aria-hidden="true">
+    <!-- blocks: six treads 160 wide (space-5xl + space-xl), heights space-xl, space-2xl, space-3xl, 80, space-4xl, 112 (multiples of space-md); grey x2 concrete-400, ink x2, red-500 x2 (red carries the most area); corners radius-none -->
+    <!-- arrangement: top-band skeleton, the name is too long for the 440px zone; one flight rising left to right with bottoms on y=112, the last tread bleeding off the top and right edges -->
+    <!-- pattern: literal motif, a stair profile plus the dimension line from Raf's stair plan (one rule, three ticks, in highlight), because the company is stairs and its proof is measurement -->
+    <!-- scales: tread 160, risers in steps of space-md (16), dimension line space-lg (24) under the band, ticks space-md tall -->
+    <rect class="grey" x="0" y="80" width="160" height="32"/>
+    <rect class="grey" x="160" y="64" width="160" height="48"/>
+    <rect class="ink" x="320" y="48" width="160" height="64"/>
+    <rect class="ink" x="480" y="32" width="160" height="80"/>
+    <rect class="red" x="640" y="16" width="160" height="96"/>
+    <rect class="red" x="800" y="0" width="160" height="112"/>
+    <path class="dim" d="M320 136.5H960M320.5 128V144M640.5 128V144M959.5 128V144"/>
+  </svg>
+  <div class="cover__text">
+    <p class="cover__name">Raf Geerts Betontrappen</p>
+    <p class="cover__tag">Betontrappen ter plaatse bekist. Het design system voor de website en het CMS.</p>
+  </div>
+</div>

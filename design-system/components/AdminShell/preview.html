@@ -1,0 +1,48 @@
+<!-- @dsCard group="CMS" height=1300 subtitle="Sidebar, top bar and content area of the CMS, in Light and Dark mode. The moon button flips the mode" -->
+<div class="rg sg-stack">
+  <div class="rg-cms" data-theme="light">
+    {{partial:cms-side|LOGO=rg-logo.svg|CUR_DASH= aria-current="page"|CUR_REAL=}}
+    <div class="rg-cms__main">
+      {{partial:cms-top|DARK=false}}
+      <main class="rg-cms__content">
+        <div class="rg-cms__pagehead">
+          <div><div class="rg-cms__crumbs"><a href="#">CMS</a> / <span>Dashboard</span></div><h1 class="t-h3">Goedemorgen, Raf</h1></div>
+          <a class="rg-btn" href="#">{{icon:plus}} Nieuwe realisatie</a>
+        </div>
+        <span class="sg-example">Example data</span>
+        <div class="rg-stats">
+          <div class="rg-stat"><span class="rg-stat__label">Nieuwe aanvragen {{icon:inbox}}</span><span class="rg-stat__value">3</span><span class="rg-stat__note">Laatste: vandaag, 09:14</span></div>
+          <div class="rg-stat"><span class="rg-stat__label">Realisaties online {{icon:images}}</span><span class="rg-stat__value">24</span><span class="rg-stat__note">2 concepten</span></div>
+          <div class="rg-stat"><span class="rg-stat__label">Foto's zonder alt-tekst {{icon:triangle-alert}}</span><span class="rg-stat__value">2</span><span class="rg-stat__note"><a href="#">Nu aanvullen</a></span></div>
+        </div>
+        <section class="rg-panel">
+          <div class="rg-panel__head"><h2 class="t-h6">Laatste aanvragen</h2><a class="rg-textlink" href="#">Alle aanvragen {{icon:arrow-right}}</a></div>
+          <div class="rg-table-wrap">
+            <table class="rg-table">
+              <thead><tr><th>Naam</th><th>Type</th><th>Gemeente</th><th>Ontvangen</th></tr></thead>
+              <tbody>
+                <tr><td><b>J. Peeters</b></td><td><span class="rg-badge">Kwarttrap</span></td><td>Westerlo</td><td class="rg-table__date">02-10-2026</td></tr>
+                <tr><td><b>A. Janssens</b></td><td><span class="rg-badge">Buitentrap</span></td><td>Herselt</td><td class="rg-table__date">01-10-2026</td></tr>
+                <tr><td><b>K. Wouters</b></td><td><span class="rg-badge">Keldertrap</span></td><td>Heist-op-den-Berg</td><td class="rg-table__date">29-09-2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="rg-cms" data-theme="dark">
+    {{partial:cms-side|LOGO=rg-logo-on-dark.svg|CUR_DASH=|CUR_REAL= aria-current="page"}}
+    <div class="rg-cms__main">
+      {{partial:cms-top|DARK=true}}
+      <main class="rg-cms__content">
+        <div class="rg-cms__pagehead">
+          <div><div class="rg-cms__crumbs"><a href="#">CMS</a> / <span>Realisaties</span></div><h1 class="t-h3">Realisaties</h1></div>
+          <a class="rg-btn" href="#">{{icon:plus}} Nieuwe realisatie</a>
+        </div>
+        <div class="rg-alert rg-alert--warning" role="status">{{icon:triangle-alert}}<div><p class="rg-alert__title">2 foto's zonder alt-tekst</p><p class="rg-alert__text">Beschrijf wat er op de foto te zien is.</p></div></div>
+        <section class="rg-panel"><div class="rg-panel__body"><p style="color: var(--ink-soft)">The DataTable goes here; see its own card.</p></div></section>
+      </main>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<!-- @dsCard group="Feedback" height=420 subtitle="The confirm dialog for destructive actions, shown open inline, plus a live trigger" -->
+<div class="rg sg-pad" data-theme="light" style="display: grid; gap: 24px; justify-items: start">
+  <div class="rg-modal rg-modal--inline" role="dialog" aria-modal="false" aria-labelledby="md-title">
+    <div class="rg-modal__head">
+      <span class="rg-modal__icon"><svg class="rg-icon" aria-hidden="true" focusable="false" stroke-linecap="square" stroke-linejoin="miter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ><path d="M10 11v6" /><path d="M14 11v6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg></span>
+      <button class="rg-btn rg-btn--ghost rg-btn--icon rg-btn--sm" type="button" aria-label="Sluiten"><svg class="rg-icon" aria-hidden="true" focusable="false" stroke-linecap="square" stroke-linejoin="miter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button>
+    </div>
+    <div class="rg-modal__body">
+      <h2 class="t-h4" id="md-title" style="color: var(--ink)">Realisatie verwijderen?</h2>
+      <p>"Keldertrap in de ruwbouw" en de 6 foto's verdwijnen van de website. Dit kan niet ongedaan worden.</p>
+    </div>
+    <div class="rg-modal__foot">
+      <button class="rg-btn rg-btn--ghost" type="button">Annuleren</button>
+      <button class="rg-btn rg-btn--danger" type="button">Verwijderen</button>
+    </div>
+  </div>
+  <button class="rg-btn rg-btn--outline rg-btn--sm" type="button" data-rg-open="md-live">Open als dialoog</button>
+  <dialog class="rg-modal" id="md-live" aria-labelledby="md-live-title">
+    <div class="rg-modal__head"><span class="rg-modal__icon"><svg class="rg-icon" aria-hidden="true" focusable="false" stroke-linecap="square" stroke-linejoin="miter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ><path d="M10 11v6" /><path d="M14 11v6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg></span><button class="rg-btn rg-btn--ghost rg-btn--icon rg-btn--sm" type="button" aria-label="Sluiten" data-rg-close><svg class="rg-icon" aria-hidden="true" focusable="false" stroke-linecap="square" stroke-linejoin="miter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></div>
+    <div class="rg-modal__body"><h2 class="t-h4" id="md-live-title" style="color: var(--ink)">Realisatie verwijderen?</h2><p>Dit kan niet ongedaan worden.</p></div>
+    <div class="rg-modal__foot"><button class="rg-btn rg-btn--ghost" type="button" data-rg-close value="cancel" autofocus>Annuleren</button><button class="rg-btn rg-btn--danger" type="button" data-rg-close value="delete">Verwijderen</button></div>
+  </dialog>
+</div>

@@ -1,0 +1,312 @@
+{
+ "assets/logo/rg-logo.svg": {
+  "id": "3bde2ac718f13d5943db0999b4bbcaac",
+  "size": 28560,
+  "type": "image/svg+xml"
+ },
+ "assets/logo/rg-logo-on-dark.svg": {
+  "id": "a4732d80c230a1c4c0a382d7afde3583",
+  "size": 28560,
+  "type": "image/svg+xml"
+ },
+ "assets/logo/rg-logo-on-red.svg": {
+  "id": "cdd55405caf7d94e92b1a20803dfe14a",
+  "size": 28560,
+  "type": "image/svg+xml"
+ },
+ "assets/logo/rg-logo-mono-black.svg": {
+  "id": "222089d9aaf36d876b4b8b3894352a31",
+  "size": 28560,
+  "type": "image/svg+xml"
+ },
+ "assets/logo/rg-logo-mono-white.svg": {
+  "id": "b27e9f7657cbdbc97bf3dae954bed745",
+  "size": 28560,
+  "type": "image/svg+xml"
+ },
+ "assets/photos/client/buitentrap-keermuur.jpg": {
+  "id": "5a82363ec8cac62b2cee92b9c0021e5c",
+  "size": 73869,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/kwarttrap-bekisting.jpg": {
+  "id": "fd11aceb6ca0ff6c4e5ea731325c0faa",
+  "size": 144998,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/trap-ontkist.jpg": {
+  "id": "46c09c133fd2160d3678d04d90cde328",
+  "size": 95391,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/bordestrap-ontkist.jpg": {
+  "id": "600c077aa5d8480afc8771e1482c0d0c",
+  "size": 55317,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/buitentrap-bekisting.jpg": {
+  "id": "0a80d86cfce02e2a8ec064e93ee9aa8f",
+  "size": 223804,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/keldertrap-bekisting.jpg": {
+  "id": "085de0ab87e418e6d1ba1f1ed7c52f03",
+  "size": 191693,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/trap-bekisting-ruwbouw.jpg": {
+  "id": "49797fab2a5e03074d761f90af8b947e",
+  "size": 153929,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/trap-afgewerkt.jpg": {
+  "id": "8cf575916ac85a4143b3863f3f65772e",
+  "size": 72911,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/plan-kwarttrap.jpg": {
+  "id": "387261eab2d6f0b33138ec31c8cebacc",
+  "size": 116443,
+  "type": "image/jpeg"
+ },
+ "assets/photos/client/bestelwagen.jpg": {
+  "id": "db249e8199ff81b5267fb5971ec5b789",
+  "size": 95964,
+  "type": "image/jpeg"
+ },
+ "assets/icons/arrow-right.svg": {
+  "id": "e96fc828f1d6db749bf83e5ec586965a",
+  "size": 343,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/arrow-up-down.svg": {
+  "id": "4b9bb5675de5238205ac2335dfc7fffc",
+  "size": 397,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/arrow-up-right.svg": {
+  "id": "ccc36f4dc5c11eacdf2db3e0827aa4bb",
+  "size": 345,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/bell.svg": {
+  "id": "b8afec90ed8f81e12317a303a19a0695",
+  "size": 468,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/calendar.svg": {
+  "id": "c620a32ca0662e95a39dde154c5d8bb9",
+  "size": 408,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/check.svg": {
+  "id": "e2c34f22a9c56e4f5a6c7055cd81b2f1",
+  "size": 315,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/chevron-down.svg": {
+  "id": "52ce1b0885a08e93a581b8fc7134de0a",
+  "size": 319,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/chevron-left.svg": {
+  "id": "f6ddc52fc41a2cb7bec586fa0982c8bc",
+  "size": 321,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/chevron-right.svg": {
+  "id": "1ca345695c77321812af8437738dc0eb",
+  "size": 321,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/chevron-up.svg": {
+  "id": "cde05d07d43a77827399bf21ccca8652",
+  "size": 319,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/circle-check.svg": {
+  "id": "9d60e3c1d660f89bd111b1eecc0785d4",
+  "size": 361,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/circle-x.svg": {
+  "id": "1eb2faeda93506abee13f6c0ad986e52",
+  "size": 372,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/clock.svg": {
+  "id": "2f23dfd883420db922e52e3a16ba81ad",
+  "size": 347,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/ellipsis.svg": {
+  "id": "12595a734d388653ebe2325ba71813fe",
+  "size": 391,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/external-link.svg": {
+  "id": "29eeb18999d10521afbb7402db5c1093",
+  "size": 416,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/eye.svg": {
+  "id": "bbcb048518de397518ce8aae313baaf9",
+  "size": 434,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/facebook.svg": {
+  "id": "7b04482c57c4c2378c1c95f3766b9c22",
+  "size": 542,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/file-text.svg": {
+  "id": "def48ac4638e5c424e369640cf19f868",
+  "size": 524,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/filter.svg": {
+  "id": "18598dd17705ef9fac470d0eedc7f0ba",
+  "size": 447,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/globe.svg": {
+  "id": "a4192b52ae6715a9e4f4f89e6eb71dc2",
+  "size": 407,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/grip-vertical.svg": {
+  "id": "176507828cced97da65ee8e9d737f4f8",
+  "size": 497,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/hammer.svg": {
+  "id": "a22eb22e0ae0e78e174929766df88a0c",
+  "size": 560,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/image.svg": {
+  "id": "467e81696fc352bdda800cfab1615645",
+  "size": 434,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/images.svg": {
+  "id": "e8d1f38734c1d1dff64dcd96ed06debc",
+  "size": 522,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/inbox.svg": {
+  "id": "08a881d3ee99a83a5afc08aa17267440",
+  "size": 464,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/info.svg": {
+  "id": "5a7ae833888872933a89df7441bc70a4",
+  "size": 369,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/layers.svg": {
+  "id": "990aa5981aa01b2c0e7e7ae8dc5a9da1",
+  "size": 587,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/layout-dashboard.svg": {
+  "id": "fcb76fe86f65ac37646351fd8ead6a42",
+  "size": 503,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/loader-circle.svg": {
+  "id": "21a03b4438f98806aea771b50b52a4e0",
+  "size": 335,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/log-out.svg": {
+  "id": "72a35eb5834312a134ba321993c8d800",
+  "size": 395,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/mail.svg": {
+  "id": "0ffec4a605bcc6e467945d8d50d32641",
+  "size": 391,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/map-pin.svg": {
+  "id": "d42bf333cc7aa45f0783859738704444",
+  "size": 437,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/menu.svg": {
+  "id": "e102865534ada4b0032115164e69ee64",
+  "size": 354,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/minus.svg": {
+  "id": "2a5b1031e33c47af053bc8caef44a252",
+  "size": 308,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/moon.svg": {
+  "id": "d030392b0f38493264f058db62f21898",
+  "size": 409,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/pencil.svg": {
+  "id": "da96ddb5991057491e63283e87ae53fb",
+  "size": 454,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/phone.svg": {
+  "id": "31ae8a0139ce1a3c497db132298137d1",
+  "size": 513,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/plus.svg": {
+  "id": "51575b0f45a59bfd6959aa9656a80fb7",
+  "size": 331,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/ruler.svg": {
+  "id": "5e844c662dba062d21ca2d2edbac2edc",
+  "size": 537,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/search.svg": {
+  "id": "71739db635f7d2f20788a86649cbfbcb",
+  "size": 352,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/settings.svg": {
+  "id": "d94536fef30a2c7ff1433f4eaa9623dd",
+  "size": 665,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/sun.svg": {
+  "id": "a0effbf4cafdd1b023b385af44fe513d",
+  "size": 559,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/trash-2.svg": {
+  "id": "4941a3241438ad68917814bf70841541",
+  "size": 467,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/triangle-alert.svg": {
+  "id": "97aa5b29b9986e0affb704554ab91fa2",
+  "size": 430,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/upload.svg": {
+  "id": "5e42147501e710ae249e152667f74cbc",
+  "size": 395,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/users.svg": {
+  "id": "acf6a03cb86ff9c43695b3578d84a0b5",
+  "size": 459,
+  "type": "image/svg+xml"
+ },
+ "assets/icons/x.svg": {
+  "id": "f5187d9b8e2a137d88c9486b5f6824ed",
+  "size": 332,
+  "type": "image/svg+xml"
+ }
+}

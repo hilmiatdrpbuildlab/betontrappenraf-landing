@@ -1,0 +1,73 @@
+<!-- @dsCard group="Forms" height=760 subtitle="Text input, unit input, select and textarea: default, filled, hint, focus, error, success, disabled, read-only" -->
+<div class="rg sg-stack">
+  <div class="sg-pad" data-theme="light">
+    <div class="rg-card rg-card--lg">
+      <div class="rg-form">
+        <div class="rg-field">
+          <label for="ff-naam">Naam <span class="rg-field__req" aria-hidden="true">*</span></label>
+          <input class="rg-input" id="ff-naam" type="text" placeholder="Voornaam en achternaam" autocomplete="name" required>
+        </div>
+        <div class="rg-field rg-field--success">
+          <label for="ff-tel">Telefoon</label>
+          <input class="rg-input" id="ff-tel" type="tel" value="0470 12 34 56" autocomplete="tel" aria-describedby="ff-tel-ok">
+          <p class="rg-field__ok" id="ff-tel-ok">{{icon:check}} Telefoonnummer klopt</p>
+        </div>
+        <div class="rg-field rg-field--error">
+          <label for="ff-mail">E-mail <span class="rg-field__req" aria-hidden="true">*</span></label>
+          <input class="rg-input" id="ff-mail" type="email" value="jan.peeters@" aria-invalid="true" aria-describedby="ff-mail-err" required>
+          <p class="rg-field__error" id="ff-mail-err">{{icon:circle-x}} Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.be.</p>
+        </div>
+        <div class="rg-field">
+          <label for="ff-hoogte">Verdiepingshoogte <span class="rg-field__opt">(optioneel)</span></label>
+          <div class="rg-input-group">
+            <input class="rg-input" id="ff-hoogte" type="text" inputmode="decimal" placeholder="278" aria-describedby="ff-hoogte-hint">
+            <span class="rg-input-group__unit">cm</span>
+          </div>
+          <p class="rg-field__hint" id="ff-hoogte-hint">Van afgewerkte vloer tot afgewerkte vloer, als u dat al weet.</p>
+        </div>
+        <div class="rg-field">
+          <label for="ff-type">Type trap</label>
+          <div class="rg-select-wrap">
+            <select class="rg-select" id="ff-type">
+              <option>Kies een type</option>
+              <option>Binnentrap</option>
+              <option>Buitentrap</option>
+              <option>Keldertrap</option>
+              <option>Bekistingswerk</option>
+            </select>
+            {{icon:chevron-down}}
+          </div>
+        </div>
+        <div class="rg-field">
+          <label for="ff-zoek">Zoeken (CMS)</label>
+          <div class="rg-input-wrap">{{icon:search}}<input class="rg-input" id="ff-zoek" type="search" placeholder="Zoek een realisatie"></div>
+        </div>
+        <div class="rg-field">
+          <label for="ff-dis">Uitgeschakeld</label>
+          <input class="rg-input" id="ff-dis" type="text" value="Niet bewerkbaar" disabled>
+        </div>
+        <div class="rg-field">
+          <label for="ff-ro">Alleen lezen</label>
+          <input class="rg-input" id="ff-ro" type="text" value="kwartdraaiende-trap" readonly>
+        </div>
+        <div class="rg-field rg-field--full">
+          <label for="ff-bericht">Uw vraag</label>
+          <textarea class="rg-textarea" id="ff-bericht" placeholder="Beschrijf kort uw trap: binnen of buiten, recht of draaiend, en waar de werf ligt."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sg-pad" data-theme="dark">
+    <div class="rg-form">
+      <div class="rg-field">
+        <label for="ff-d1">Naam</label>
+        <input class="rg-input" id="ff-d1" type="text" placeholder="Voornaam en achternaam">
+      </div>
+      <div class="rg-field rg-field--error">
+        <label for="ff-d2">E-mail</label>
+        <input class="rg-input" id="ff-d2" type="email" value="jan@" aria-invalid="true" aria-describedby="ff-d2-err">
+        <p class="rg-field__error" id="ff-d2-err">{{icon:circle-x}} Vul een geldig e-mailadres in.</p>
+      </div>
+    </div>
+  </div>
+</div>

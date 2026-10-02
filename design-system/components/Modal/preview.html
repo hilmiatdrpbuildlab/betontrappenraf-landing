@@ -1,0 +1,23 @@
+<!-- @dsCard group="Feedback" height=420 subtitle="The confirm dialog for destructive actions, shown open inline, plus a live trigger" -->
+<div class="rg sg-pad" data-theme="light" style="display: grid; gap: 24px; justify-items: start">
+  <div class="rg-modal rg-modal--inline" role="dialog" aria-modal="false" aria-labelledby="md-title">
+    <div class="rg-modal__head">
+      <span class="rg-modal__icon">{{icon:trash-2}}</span>
+      <button class="rg-btn rg-btn--ghost rg-btn--icon rg-btn--sm" type="button" aria-label="Sluiten">{{icon:x}}</button>
+    </div>
+    <div class="rg-modal__body">
+      <h2 class="t-h4" id="md-title" style="color: var(--ink)">Realisatie verwijderen?</h2>
+      <p>"Keldertrap in de ruwbouw" en de 6 foto's verdwijnen van de website. Dit kan niet ongedaan worden.</p>
+    </div>
+    <div class="rg-modal__foot">
+      <button class="rg-btn rg-btn--ghost" type="button">Annuleren</button>
+      <button class="rg-btn rg-btn--danger" type="button">Verwijderen</button>
+    </div>
+  </div>
+  <button class="rg-btn rg-btn--outline rg-btn--sm" type="button" data-rg-open="md-live">Open als dialoog</button>
+  <dialog class="rg-modal" id="md-live" aria-labelledby="md-live-title">
+    <div class="rg-modal__head"><span class="rg-modal__icon">{{icon:trash-2}}</span><button class="rg-btn rg-btn--ghost rg-btn--icon rg-btn--sm" type="button" aria-label="Sluiten" data-rg-close>{{icon:x}}</button></div>
+    <div class="rg-modal__body"><h2 class="t-h4" id="md-live-title" style="color: var(--ink)">Realisatie verwijderen?</h2><p>Dit kan niet ongedaan worden.</p></div>
+    <div class="rg-modal__foot"><button class="rg-btn rg-btn--ghost" type="button" data-rg-close value="cancel" autofocus>Annuleren</button><button class="rg-btn rg-btn--danger" type="button" data-rg-close value="delete">Verwijderen</button></div>
+  </dialog>
+</div>

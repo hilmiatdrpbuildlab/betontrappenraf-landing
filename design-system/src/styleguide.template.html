@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raf Geerts Betontrappen Design System</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/rg.css">
+<link rel="stylesheet" href="css/sg.css">
+<style>
+  /* Style guide page chrome. Built from the same tokens as the components. */
+  .sg-top { position: sticky; top: 0; z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line); }
+  .sg-top__in { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); height: 60px; }
+  .sg-top__brand { display: flex; align-items: center; gap: var(--space-sm); }
+  .rg .sg-top__brand { color: var(--ink); text-decoration: none; }
+  .sg-top__brand img { height: 28px; width: auto; }
+  .sg-top__brand span { font: 700 13px/1 var(--font-sans); letter-spacing: 0.05em; text-transform: uppercase; font-variation-settings: "wdth" 85; }
+  .sg-cover { position: relative; isolation: isolate; overflow: hidden; padding-block: var(--space-4xl) var(--space-2xl); }
+  .sg-cover > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+  .sg-cover::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(14, 15, 16, 0.94) 0%, rgba(14, 15, 16, 0.75) 55%, rgba(14, 15, 16, 0.35) 100%); }
+  .sg-cover__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-2xl); align-items: end; }
+  .sg-cover__copy { display: grid; gap: var(--space-lg); }
+  .sg-cover__copy .t-lead { color: var(--ink); max-width: 46ch; }
+  .sg-cover__themes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xs); }
+  .sg-cover__theme { display: grid; gap: var(--space-xs); align-content: end; min-height: 150px; padding: var(--space-md); border: 1px solid var(--line); }
+  .sg-cover__theme b { font: 800 26px/1 var(--font-sans); text-transform: uppercase; font-variation-settings: "wdth" 75; }
+  .sg-cover__theme span { font-size: 13px; color: var(--ink-soft); line-height: 1.35; }
+
+  .sg-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: var(--space-2xl); align-items: start; padding-block: var(--space-3xl); }
+  .sg-nav { position: sticky; top: 84px; max-height: calc(100vh - 100px); overflow-y: auto; }
+  .sg-nav ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 1px; }
+  .sg-nav a { display: block; padding: 6px 10px; font-size: 14px; color: var(--ink-soft); text-decoration: none; border-left: 2px solid transparent; }
+  .rg .sg-nav a { color: var(--ink-soft); text-decoration: none; }
+  .rg .sg-nav a:hover { color: var(--ink); border-left-color: var(--highlight); }
+  .sg-nav__group { font: 500 11px/1.3 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); padding: 16px 10px 6px; }
+  .sg-main { display: grid; gap: var(--space-5xl); min-width: 0; }
+  .sg-block { display: grid; gap: var(--space-lg); scroll-margin-top: 80px; }
+  .sg-block > header { display: grid; gap: var(--space-sm); max-width: 72ch; }
+  .sg-block > header p { color: var(--ink-soft); }
+
+  .sg-doc { display: grid; gap: var(--space-sm); max-width: 78ch; }
+  .sg-doc h4, .sg-comp__doc h4 { font: 650 22px/1.25 var(--font-sans); letter-spacing: -0.01em; margin: var(--space-lg) 0 0; }
+  .sg-doc h5 { font: 700 16px/1.4 var(--font-sans); margin: var(--space-md) 0 0; }
+  .sg-doc p, .sg-comp__doc p { color: var(--ink-soft); }
+  .sg-doc ul, .sg-comp__doc ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; color: var(--ink-soft); }
+  .sg-doc li::marker, .sg-comp__doc li::marker { color: var(--highlight); }
+  .rg code { font: 400 0.86em/1 var(--font-mono); background: var(--surface-sunken); color: var(--ink); padding: 0.2em 0.4em; border-radius: var(--radius-xs); }
+  .sg-doc strong, .sg-comp__doc strong { color: var(--ink); font-weight: 600; }
+  .sg-code { margin: 0; max-height: 420px; overflow: auto; padding: var(--space-md); background: var(--concrete-950); color: var(--concrete-100); border-radius: var(--radius-sm); font: 400 12.5px/1.55 var(--font-mono); }
+  .sg-code code { background: none; color: inherit; padding: 0; font: inherit; }
+  .sg-hint { font-size: 13px; color: var(--ink-faint); }
+
+  .sg-table { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+  .sg-table table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
+  .sg-table th { text-align: left; font: 500 11px/1.3 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); padding: 12px 14px; border-bottom: 1px solid var(--line); background: var(--surface-sunken); }
+  .sg-table td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--ink-soft); }
+  .sg-table tr:last-child td { border-bottom: 0; }
+  .sg-table td:first-child { color: var(--ink); font-weight: 600; }
+  .sg-usage { font-size: 13px; color: var(--ink-soft); line-height: 1.45; margin-top: 4px; font-weight: 400; }
+
+  .sg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: var(--space-md); }
+  .sg-swatch { display: grid; gap: var(--space-xs); align-content: start; }
+  .sg-swatch__chip { height: 104px; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; padding: 10px 12px; font: 500 12px/1 var(--font-mono); letter-spacing: 0.04em; box-shadow: inset 0 0 0 1px rgba(14, 15, 16, 0.1); }
+  .sg-swatch figcaption { display: grid; gap: 4px; font-size: 13px; line-height: 1.45; color: var(--ink-soft); }
+  .sg-swatch figcaption strong { font: 500 14px/1.2 var(--font-mono); color: var(--ink); }
+  .sg-semantic td { min-width: 110px; }
+  .sg-semantic td:first-child { min-width: 300px; }
+  .sg-chipcell { padding: 8px; }
+  .sg-chip { display: block; height: 36px; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 20%, transparent); }
+
+  .sg-type { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: var(--space-lg); padding-block: var(--space-lg); border-top: 1px solid var(--line); align-items: baseline; }
+  .sg-type__meta { display: grid; gap: 4px; font-size: 13px; line-height: 1.4; color: var(--ink-soft); justify-items: start; }
+  .sg-type__sample { min-width: 0; overflow-wrap: anywhere; }
+
+  .sg-space { display: grid; grid-template-columns: 96px 140px 56px minmax(0, 1fr); gap: var(--space-md); align-items: center; padding-block: 10px; border-top: 1px solid var(--line); font-size: 14px; }
+  .sg-space__bar { display: block; height: 12px; background: var(--highlight); }
+  .sg-shapes { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--space-lg); }
+  .sg-radius, .sg-shadow { display: grid; gap: var(--space-sm); font-size: 14px; align-content: start; }
+  .sg-radius > div { height: 110px; background: var(--concrete-400); }
+  .sg-shadow > div { height: 110px; border-radius: var(--radius-sm); background: var(--white); }
+  .sg-radius figcaption, .sg-shadow figcaption { display: grid; gap: 4px; justify-items: start; }
+
+  .sg-logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-md); }
+  .sg-logos figure { display: grid; gap: var(--space-sm); align-content: start; }
+  .sg-logo { height: 180px; display: grid; place-items: center; padding: var(--space-xl); box-shadow: inset 0 0 0 1px rgba(14, 15, 16, 0.1); }
+  .sg-logo img { max-height: 90px; width: auto; }
+  .sg-logos figcaption { display: grid; gap: 4px; font-size: 13px; color: var(--ink-soft); line-height: 1.45; justify-items: start; }
+
+  .sg-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: var(--space-md); }
+  .sg-photo { display: grid; gap: var(--space-xs); align-content: start; }
+  .sg-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .sg-photo figcaption { display: grid; gap: 2px; font-size: 12px; line-height: 1.4; color: var(--ink-soft); }
+  .sg-photo figcaption strong { font: 500 12px/1.4 var(--font-mono); color: var(--ink); overflow-wrap: anywhere; }
+
+  .sg-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: var(--space-xs); }
+  .sg-icons figure { display: grid; justify-items: center; gap: var(--space-sm); padding: var(--space-lg) var(--space-xs); background: var(--surface); border: 1px solid var(--line); }
+  .sg-icons .rg-icon { width: 24px; height: 24px; color: var(--ink); }
+  .sg-icons figcaption { font: 400 11px/1.3 var(--font-mono); color: var(--ink-soft); text-align: center; overflow-wrap: anywhere; }
+
+  .sg-comps { display: grid; gap: var(--space-5xl); }
+  .sg-comp { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); scroll-margin-top: 80px; }
+  .sg-comp__head { display: grid; gap: var(--space-xs); }
+  .sg-comp__head .t-label { color: var(--link); }
+  .sg-sub { color: var(--ink-soft); }
+  .sg-comp__doc { display: grid; gap: var(--space-xs); max-width: 78ch; }
+  .sg-comp__doc h4 { font-size: 17px; margin-top: var(--space-sm); }
+  .sg-demo { overflow: hidden; border: 1px solid var(--line); background: var(--bg); }
+  @media (max-width: 1000px) { .sg-layout { grid-template-columns: minmax(0, 1fr); } .sg-nav { display: none; } .sg-cover__grid { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 640px) { .sg-type, .sg-space { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); } .sg-cover__themes { grid-template-columns: minmax(0, 1fr); } .sg-cover__theme { min-height: 0; } }
+</style>
+</head>
+<body class="rg">
+  <div class="sg-top">
+    <div class="rg-container sg-top__in">
+      <a class="sg-top__brand" href="#top"><img src="{{logo:rg-logo.svg}}" alt="Raf Geerts Betontrappen"><span>Design system</span></a>
+      <span class="t-label" style="color: var(--ink-soft)">Versie 1 · oktober 2026</span>
+    </div>
+  </div>
+
+  <section class="sg-cover" id="top" data-theme="dark">
+    <img src="{{img:photos/client/kwarttrap-bekisting.jpg}}" alt="">
+    <div class="rg-container sg-cover__grid">
+      <div class="sg-cover__copy">
+        <span class="rg-eyebrow"><span class="rg-step-mark"></span>Design system v1 · website en CMS</span>
+        <h1 class="t-display">Raf <span class="rg-accent-word">Geerts</span></h1>
+        <p class="t-lead">One system for the new betontrappenraf.be and its CMS: concrete grounds, black condensed type, one red, and Raf's own stairs as the imagery. Sturdy, reliable, precise.</p>
+      </div>
+      <div class="sg-cover__themes">
+        <div class="sg-cover__theme" data-theme="light"><b>Light</b><span>The page. Concrete-50 ground, white cards, red-600 buttons.</span></div>
+        <div class="sg-cover__theme" data-theme="dark"><b>Dark</b><span>Hero, Werkwijze, footer, and the CMS dark mode.</span></div>
+        <div class="sg-cover__theme" data-theme="red"><b>Red</b><span>One call-to-action band per page. Black on red.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rg-container sg-layout">
+    <nav class="sg-nav" aria-label="Style guide">
+      <ul>
+        <li class="sg-nav__group">Foundations</li>
+        <li><a href="#guide">Brand and principles</a></li>
+        {{NAV_GUIDE}}
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#colour">Colour tokens</a></li>
+        <li><a href="#type">Type specimens</a></li>
+        <li><a href="#space">Space, shape, depth</a></li>
+        <li><a href="#imagery">Imagery</a></li>
+        <li><a href="#icons">Icons</a></li>
+        {{NAV_COMPONENTS}}
+      </ul>
+    </nav>
+
+    <main class="sg-main">
+      <section class="sg-block" id="guide">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Brand</span><h2 class="t-h1">Brand and principles</h2></header>
+        <div class="sg-doc">{{GUIDE}}</div>
+      </section>
+
+      {{SECTIONS}}
+
+      <section class="sg-block" id="logo">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Logo</span><h2 class="t-h1">Logo</h2><p>Raf's own logo, traced into clean vectors, in five files for every ground.</p></header>
+        {{LOGOS}}
+      </section>
+
+      <section class="sg-block" id="colour">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Colour</span><h2 class="t-h1">Colour tokens</h2><p>The fixed palette, then every semantic token in each theme.</p></header>
+        {{SWATCHES}}
+        {{SEMANTIC}}
+      </section>
+
+      <section class="sg-block" id="type">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Typography</span><h2 class="t-h1">Type specimens</h2><p>Archivo (variable weight and width) and IBM Plex Mono, self-hosted. Desktop sizes shown.</p></header>
+        <div>{{TYPE}}</div>
+      </section>
+
+      <section class="sg-block" id="space">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Space, shape, depth</span><h2 class="t-h1">Space, shape, depth</h2></header>
+        <div>{{SPACING}}</div>
+        <div class="sg-shapes">{{RADIUS}}</div>
+        <div class="sg-shapes">{{SHADOW}}</div>
+        {{LAYOUT}}
+      </section>
+
+      <section class="sg-block" id="imagery">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Imagery</span><h2 class="t-h1">Imagery</h2><p>Ten photos of Raf's own work. Screen captures from Facebook; replace with the originals before launch.</p></header>
+        {{PHOTOS}}
+      </section>
+
+      <section class="sg-block" id="icons">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Icons</span><h2 class="t-h1">Icons</h2><p>Lucide (ISC), stroke 2, square caps, inlined so they take the text colour. Facebook from Simple Icons (CC0).</p></header>
+        {{ICONS}}
+      </section>
+
+      <section class="sg-block" id="components">
+        <header><span class="rg-eyebrow"><span class="rg-step-mark"></span>Components</span><h2 class="t-h1">Components</h2><p>Twenty-three components for the website and the CMS, each live with its rules. Resize the window for the phone layouts.</p></header>
+        <div class="sg-comps">{{COMPONENTS}}</div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="rg-footer" data-theme="dark" style="padding-block: 32px">
+    <div class="rg-container rg-footer__bottom" style="border-top: 0; padding-top: 0">
+      <span>Raf Geerts Betontrappen design system v1</span>
+      <span>Archivo and IBM Plex Mono (SIL OFL) · Lucide (ISC) · Simple Icons (CC0) · Photos: Raf Geerts</span>
+    </div>
+  </footer>
+<script src="js/rg.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+This is the link to his existing page: https://www.betontrappenraf.be/
+
+Raf Geerts – Betontrappen, based in Wiekevorst (Belgium). Raf makes and installs concrete stairs: he produces them himself and places them on site.
+What the demo should include
+      •     One single, clean, good-looking landing page (no multi-page site)
+      •     Color scheme: red, black and white as in design system
+      •     A photo section/gallery to showcase his stairs and finished projects (see attached photos)
+      •     A contact form so people can request a quote or ask questions
+
+Suggested page flow
+Hero with logo and a strong headline → short intro about Raf and his craft → what he offers (making and installing concrete stairs) → photo gallery → contact form with contact details and region.

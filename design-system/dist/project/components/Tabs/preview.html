@@ -1,0 +1,39 @@
+<!-- @dsCard group="Navigation" height=420 subtitle="Underline tabs with the red marker, and the boxed segmented variant for CMS views" -->
+<div class="rg sg-stack">
+  <div class="sg-pad" data-theme="light">
+    <div data-rg-tabs>
+      <div class="rg-tabs__list" role="tablist" aria-label="Realisatie bewerken">
+        <button class="rg-tabs__tab" role="tab" id="tb-1" aria-controls="tp-1" aria-selected="true">Inhoud</button>
+        <button class="rg-tabs__tab" role="tab" id="tb-2" aria-controls="tp-2" aria-selected="false" tabindex="-1">Foto's <span class="rg-tabs__count">6</span></button>
+        <button class="rg-tabs__tab" role="tab" id="tb-3" aria-controls="tp-3" aria-selected="false" tabindex="-1">Maatvoering</button>
+        <button class="rg-tabs__tab" role="tab" id="tb-4" aria-controls="tp-4" aria-selected="false" tabindex="-1">SEO</button>
+      </div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-1" aria-labelledby="tb-1"><p class="t-small" style="color: var(--ink-soft)">Titel, type, status en beschrijving van de realisatie.</p></div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-2" aria-labelledby="tb-2" hidden><p class="t-small" style="color: var(--ink-soft)">Foto's uploaden, ordenen en van alt-tekst voorzien.</p></div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-3" aria-labelledby="tb-3" hidden><p class="t-small" style="color: var(--ink-soft)">Optrede, aantrede, aantal treden en verdiepingshoogte.</p></div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-4" aria-labelledby="tb-4" hidden><p class="t-small" style="color: var(--ink-soft)">Paginatitel en beschrijving voor zoekmachines.</p></div>
+    </div>
+  </div>
+  <div class="sg-pad" data-theme="light">
+    <div class="rg-tabs--boxed" data-rg-tabs>
+      <div class="rg-tabs__list" role="tablist" aria-label="Weergave">
+        <button class="rg-tabs__tab" role="tab" id="tb-b1" aria-controls="tp-b1" aria-selected="true">Lijst</button>
+        <button class="rg-tabs__tab" role="tab" id="tb-b2" aria-controls="tp-b2" aria-selected="false" tabindex="-1">Raster</button>
+      </div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-b1" aria-labelledby="tb-b1"></div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-b2" aria-labelledby="tb-b2" hidden></div>
+    </div>
+  </div>
+  <div class="sg-pad" data-theme="dark">
+    <div data-rg-tabs>
+      <div class="rg-tabs__list" role="tablist" aria-label="Aanvragen">
+        <button class="rg-tabs__tab" role="tab" id="tb-d1" aria-controls="tp-d1" aria-selected="true">Nieuw <span class="rg-tabs__count">3</span></button>
+        <button class="rg-tabs__tab" role="tab" id="tb-d2" aria-controls="tp-d2" aria-selected="false" tabindex="-1">Beantwoord</button>
+        <button class="rg-tabs__tab" role="tab" id="tb-d3" aria-controls="tp-d3" aria-selected="false" tabindex="-1">Archief</button>
+      </div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-d1" aria-labelledby="tb-d1"></div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-d2" aria-labelledby="tb-d2" hidden></div>
+      <div class="rg-tabs__panel" role="tabpanel" id="tp-d3" aria-labelledby="tb-d3" hidden></div>
+    </div>
+  </div>
+</div>
